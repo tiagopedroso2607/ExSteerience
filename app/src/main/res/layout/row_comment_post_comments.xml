@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/row_post"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="15dp">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:addStatesFromChildren="false"
+        android:keepScreenOn="false"
+        android:orientation="vertical"
+        android:scrollbarAlwaysDrawHorizontalTrack="false">
+
+        <TextView
+            android:id="@+id/comment_comments_AutorComentario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:maxWidth="80dp"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/comment_comments_AutorRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:maxWidth="80dp"
+            android:textSize="10sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/comment_comments_Comentario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/preto"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/comment_comments_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</LinearLayout>

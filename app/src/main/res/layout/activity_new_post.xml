@@ -1,0 +1,248 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.example.grupo7.daam.myexsteerience.NewPostActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_google_signin_btn_text_dark_default">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/Post_layout_height"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/backActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:paddingLeft="@dimen/Post_button_paddingLeft"
+                app:srcCompat="@android:drawable/ic_menu_revert" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/Post_toolbar_minHeight" />
+
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/anuncioScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/Post_button_paddingLeft">
+
+        <LinearLayout
+            android:id="@+id/FormularioAnuncio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/newPost_layout_marginLeft"
+                android:layout_marginRight="@dimen/newPost_layout_marginRight"
+                android:layout_marginTop="@dimen/newPost_layout_marginTop"
+                android:background="@color/common_google_signin_btn_text_dark_default"
+                android:gravity="center"
+                android:paddingLeft="@dimen/newPost_layout_marginLeft"
+                android:paddingRight="@dimen/newPost_layout_marginRight">
+
+                <EditText
+                    android:id="@+id/textTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+
+
+                    android:hint="@string/anuncio_titulo"
+                    android:imeOptions="actionGo"
+                    android:inputType="textCapSentences|textEmailSubject"
+                    android:paddingBottom="10dp"
+                    android:textSize="14sp" />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/newPost_layout_marginLeft"
+                android:layout_marginRight="@dimen/newPost_layout_marginRight"
+                android:layout_marginTop="15dp"
+                android:background="@color/common_google_signin_btn_text_dark_default"
+                android:paddingLeft="@dimen/newPost_layout_marginLeft"
+                android:paddingRight="@dimen/newPost_layout_marginRight">
+
+                <EditText
+                    android:id="@+id/textAnuncio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+                    android:hint="@string/anuncio_descricao"
+                    android:imeActionId="@+id/Titulo"
+                    android:maxLines="20"
+                    android:minHeight="125dp"
+                    android:selectAllOnFocus="false"
+                    android:textSize="12sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="15dp" />
+
+            <LinearLayout
+                android:id="@+id/selectCity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="60dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/newPost_layout_marginLeft"
+                android:paddingRight="@dimen/newPost_layout_marginRight">
+
+                <TextView
+                    android:id="@+id/textCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@color/common_google_signin_btn_text_dark_pressed"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:gravity="left|center"
+                    android:paddingLeft="@dimen/newPost_layout_marginLeft"
+                    android:paddingRight="@dimen/newPost_layout_marginRight"
+                    android:text="@string/anuncio_city"
+                    android:textColor="#FF000000"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/imageCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/common_google_signin_btn_text_dark_pressed"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="@dimen/newPost_layout_marginLeft"
+                    android:paddingRight="@dimen/newPost_layout_marginRight"
+                    android:paddingTop="16dp"
+                    android:scaleType="fitCenter"
+                    android:src="@android:drawable/arrow_down_float" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/selectCategoria"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:minHeight="60dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/newPost_layout_marginLeft"
+                android:paddingRight="@dimen/newPost_layout_marginRight">
+
+                <TextView
+                    android:id="@+id/textcategoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:gravity="left|center"
+                    android:paddingLeft="@dimen/newPost_layout_marginLeft"
+                    android:paddingRight="@dimen/newPost_layout_marginRight"
+                    android:text="@string/anuncio_subject"
+                    android:textColor="#FF000000"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/imageCategoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="@dimen/newPost_layout_marginLeft"
+                    android:paddingRight="@dimen/newPost_layout_marginRight"
+                    android:paddingTop="16dp"
+                    android:scaleType="fitCenter"
+                    android:src="@android:drawable/arrow_down_float" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/selectData"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:minHeight="60dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/newPost_layout_marginLeft"
+                android:paddingRight="@dimen/newPost_layout_marginRight">
+
+                <TextView
+                    android:id="@+id/textData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:gravity="left|center"
+                    android:paddingLeft="@dimen/newPost_layout_marginLeft"
+                    android:paddingRight="@dimen/newPost_layout_marginRight"
+                    android:text="@string/anuncio_dataSelect"
+                    android:textColor="#FF000000"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/imageData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="@dimen/newPost_layout_marginLeft"
+                    android:paddingRight="@dimen/newPost_layout_marginRight"
+                    android:paddingTop="16dp"
+                    android:scaleType="fitCenter"
+                    android:src="@android:drawable/arrow_down_float" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/Post"
+                style="?android:textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:text="@string/anuncio_send"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

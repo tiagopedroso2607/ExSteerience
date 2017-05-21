@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="subjects_names">
+        <item>@string/anuncio_subject_culture</item>
+        <item>@string/anuncio_subject_Family</item>
+        <item>@string/anuncio_subject_Sports</item>
+        <item>@string/anuncio_subject_Hotels</item>
+        <item>@string/anuncio_subject_Gastronomy</item>
+        <item>@string/anuncio_subject_Nature</item>
+        <item>@string/anuncio_subject_Romance</item>
+        <item>@string/anuncio_subject_Sun</item>
+        <item>@string/anuncio_subject_AcessableTurism</item>
+        <item>@string/anuncio_subject_Outdoors</item>
+        <item>@string/anuncio_subject_Well_being</item>
+        <item>@string/anuncio_subject_Retail</item>
+    </string-array>
+
+    <string-array name="city_names">
+        <item>Aveiro</item>
+        <item>Beja</item>
+        <item>Braga</item>
+        <item>Bragança</item>
+        <item>Castelo Branco</item>
+        <item>Coimbra</item>
+        <item>Évora</item>
+        <item>Faro</item>
+        <item>Guarda</item>
+        <item>Leiria</item>
+        <item>Lisboa</item>
+        <item>Portalegre</item>
+        <item>Porto</item>
+        <item>Santarém</item>
+        <item>Setúbal</item>
+        <item>Viana do Castelo</item>
+        <item>Vila Real</item>
+        <item>Viseu</item>
+        <item>Madeira</item>
+        <item>Açores</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">ExSteerience</string>
+    <string name="loading">A carregar...</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- internet -->
+    <string name="net_title">Conexão perdida... </string>
+    <string name="net_msg">Conexão perdida ao servidor!</string>
+    <string name="net_botao">Tentar reconectar</string>
+
+    <!-- botoes comuns -->
+    <string name="bot_cancel">Cancelar</string>
+    <string name="bot_ok">OK</string>
+    <string name="bot_comment">Comentar</string>
+    <string name="bot_change_date">Alterar data</string>
+    <string name="bot_delete_poster">Apagar publicação</string>
+
+    <!-- erros  -->
+    <string name="erro_day">Erro: Selecionar dia futuro</string>
+    <string name="erro_subjects">Erro: Selecionar Tópico</string>
+    <string name="erro_city">Erro: Selecionar cidade</string>
+    <string name="erro_title">Erro: Campo titulo está vazio</string>
+    <string name="erro_comment">Erro: Campo comentário está vazio</string>
+    <string name="erro_google_play">Erro dos serviços Google Play</string>
+    <string name="erro_authentication">Erro na autentificação</string>
+
+
+    <!-- menu nav -->
+    <string name="nav_div_Account">Conta</string>
+    <string name="nav_InfoUser">Informação do utilizador</string>
+    <string name="nav_signOut">Desconectar</string>
+    <string name="nav_myPoster">As minhas publicações</string>
+    <string name="nav_Poster">Publicações</string>
+
+    <!-- Poster Formulario -->
+    <string name="anuncio_title">Nova publicação</string>
+    <string name="anuncio_titulo">Titulo</string>
+    <string name="anuncio_descricao">Descrição (opcional)</string>
+    <string name="anuncio_city">Selecionar cidade</string>
+    <string name="anuncio_subject">Selecionar tópico</string>
+    <string name="anuncio_dataSelect">Selecionar data</string>
+    <string name="anuncio_dataPick">Disponível até</string>
+    <string name="anuncio_send">Publicar</string>
+    <string name="anuncio_dialog_city">Escolher cidade: </string>
+    <string name="anuncio_dialog_subject">Escolher tópico: </string>
+
+    <string name="anuncio_subject_culture">Cultura e arte</string>
+    <string name="anuncio_subject_Family">Família</string>
+    <string name="anuncio_subject_Sports">Desportos</string>
+    <string name="anuncio_subject_Hotels">Hotéis</string>
+    <string name="anuncio_subject_Gastronomy">Vinho e gastronomia</string>
+    <string name="anuncio_subject_Nature">Natureza</string>
+    <string name="anuncio_subject_Romance">Romance</string>
+    <string name="anuncio_subject_Sun">Sol e mar</string>
+    <string name="anuncio_subject_AcessableTurism">Turismo acessível</string>
+    <string name="anuncio_subject_Outdoors">Ar livre</string>
+    <string name="anuncio_subject_Well_being">Bem-estar</string>
+    <string name="anuncio_subject_Retail">Retalho</string>
+
+    <!-- Poster userInfo -->
+    <string name="userInfo_rate">Rácio: </string>
+    <string name="userInfo_datecreate">Criado em </string>
+    <string name="userInfo_nr_published">Numero de publicações publicadas: </string>
+    <string name="userInfo_nr_comments">Numero de comentários: </string>
+    <string name="userInfo_nr_votes">Numero de votos recebidos: </string>
+    <string name="userInfo_nr_votes_cast">Numero de votos dados: </string>
+    <string name="userInfo_averages_votes_cast">Média de votos dados: </string>
+
+    <!-- Poster splash -->
+    <string name="splash">DAAM (ISCTE) </string>
+    <string name="splash_tiago">Tiago Pedroso (nº64794)</string>
+    <string name="splash_francisco">Francisco Rações (nº65170)</string>
+    <string name="splash_artur">Artur Baptista (nº60374)</string>
+
+    <!-- Rating -->
+    <string name="rating">Classificar comentário: </string>
+
+    <!-- Comment Poster and  Rate Poster-->
+    <string name="comment_msg">Inserir comentário: </string>
+    <string name="comment_rating">Classificação do comentário: </string>
+    <string name="comment_notRated">Nenhuma classificação </string>
+    <string name="comment_comment">Comentário: </string>
+    <string name="comment_geral_rating">Classificação geral: </string>
+
+
+    <string name="comment_city">Cidade: </string>
+    <string name="comment_date">Disponível até: </string>
+    <string name="comment_subject">Tópico: </string>
+    <string name="comment_author">Publicado por: </string>
+    <string name="comment_description">Descrição: </string>
+    <string name="comment_title">Titulo: </string>
+    <string name="comment_click_rate">Clicar para classificar </string>
+
+    <!-- filtro -->
+    <string name="filtro_nome">Filtro </string>
+    <string name="filtro_city">Escolhe uma cidade (AutoComplete) </string>
+    <string name="filtro_subject">Clica para escolher as categorias</string>
+
+
+    <!-- Strings related to login -->
+    <string name="log_back">Pressione back para sair</string>
+
+</resources>

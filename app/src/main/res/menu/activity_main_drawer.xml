@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_Post"
+            android:title="@string/nav_Poster" />
+        <item
+            android:id="@+id/nav_myPost"
+            android:title="@string/nav_myPoster" />
+
+    </group>
+
+    <item android:title="@string/nav_div_Account">
+        <menu>
+            <item
+                android:id="@+id/nav_InfoUser"
+                android:title="@string/nav_InfoUser" />
+            <item
+                android:id="@+id/nav_signOut"
+                android:title="@string/nav_signOut" />
+        </menu>
+    </item>
+
+</menu>

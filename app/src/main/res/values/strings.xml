@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">ExSteerience</string>
+    <string name="loading">Loading...</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- internet -->
+    <string name="net_title">Disconnected... </string>
+    <string name="net_msg">Lost connection to server!</string>
+    <string name="net_botao">Try Again</string>
+
+    <!-- botoes comuns -->
+    <string name="bot_cancel">Cancel</string>
+    <string name="bot_ok">OK</string>
+    <string name="bot_comment">Comment</string>
+    <string name="bot_change_date">Change Date</string>
+    <string name="bot_delete_poster">Delete Post</string>
+
+    <!-- erros  -->
+    <string name="erro_day">Error: Select Future day</string>
+    <string name="erro_subjects">Error: Subject is empty</string>
+    <string name="erro_city">Error: City is empty</string>
+    <string name="erro_title">Error: Title is empty</string>
+    <string name="erro_comment">Error: Comment is empty</string>
+    <string name="erro_google_play">Google Play Services error.</string>
+    <string name="erro_authentication">Authentication failed.</string>
+
+
+    <!-- menu nav -->
+    <string name="nav_div_Account">Account</string>
+    <string name="nav_InfoUser">User Info</string>
+    <string name="nav_signOut">Sign Out</string>
+    <string name="nav_myPoster">My Posts</string>
+    <string name="nav_Poster">Posts</string>
+
+    <!-- Post Formulario -->
+    <string name="anuncio_title">New Post</string>
+    <string name="anuncio_titulo">Title</string>
+    <string name="anuncio_descricao">Description (optional)</string>
+    <string name="anuncio_city">Select City</string>
+    <string name="anuncio_subject">Select Subject</string>
+    <string name="anuncio_dataSelect">Select Available Date</string>
+    <string name="anuncio_dataPick">Available until</string>
+    <string name="anuncio_send">Send</string>
+    <string name="anuncio_dialog_city">Pick a city: </string>
+    <string name="anuncio_dialog_subject">Select One Subject/class: </string>
+
+    <string name="anuncio_subject_culture">Art and Culture</string>
+    <string name="anuncio_subject_Family">Family</string>
+    <string name="anuncio_subject_Sports">Sports</string>
+    <string name="anuncio_subject_Hotels">Hotels</string>
+    <string name="anuncio_subject_Gastronomy">Gastronomy and Wine</string>
+    <string name="anuncio_subject_Nature">Nature</string>
+    <string name="anuncio_subject_Romance">Romance</string>
+    <string name="anuncio_subject_Sun">Sun and Sea</string>
+    <string name="anuncio_subject_AcessableTurism">Acessable Turism</string>
+    <string name="anuncio_subject_Outdoors">Outdoors</string>
+    <string name="anuncio_subject_Well_being">Well-being</string>
+    <string name="anuncio_subject_Retail">Retail</string>
+
+    <!-- Post userInfo -->
+    <string name="userInfo_rate">Rating: </string>
+    <string name="userInfo_datecreate">Created at </string>
+    <string name="userInfo_nr_published">Number of published requests: </string>
+    <string name="userInfo_nr_comments">Number of comments: </string>
+    <string name="userInfo_nr_votes">Number of votes received: </string>
+    <string name="userInfo_nr_votes_cast">Number of votes cast: </string>
+    <string name="userInfo_averages_votes_cast">Average votes cast: </string>
+
+    <!-- Post splash -->
+    <string name="splash">DAAM (ISCTE) </string>
+    <string name="splash_tiago">Tiago Pedroso (nº64794)</string>
+    <string name="splash_francisco">Francisco Rações (nº65170)</string>
+    <string name="splash_artur">Artur Baptista (nº60374)</string>
+
+    <!-- Rating -->
+    <string name="rating">Rate comment: </string>
+
+    <!-- Comment Post and  Rate Post-->
+    <string name="comment_msg">Enter Your Comment: </string>
+    <string name="comment_rating">Comment Rating: </string>
+    <string name="comment_notRated">Not Rated </string>
+    <string name="comment_comment">Comment: </string>
+    <string name="comment_geral_rating">Geral Rating: </string>
+
+
+    <string name="comment_city">City: </string>
+    <string name="comment_date">Available until: </string>
+    <string name="comment_subject">Subject: </string>
+    <string name="comment_author">Posted by: </string>
+    <string name="comment_description">Description: </string>
+    <string name="comment_title">Title: </string>
+    <string name="comment_click_rate">Click to rate the comment </string>
+
+    <!-- filtro -->
+    <string name="filtro_nome">Filter </string>
+    <string name="filtro_city">Write a city (AutoComplete) </string>
+    <string name="filtro_subject">Click to choose subjects</string>
+    <!-- Strings related to login -->
+    <string name="log_back">Press Back again to Exit.</string>
+
+</resources>
