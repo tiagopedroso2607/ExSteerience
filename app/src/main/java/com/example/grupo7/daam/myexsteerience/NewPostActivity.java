@@ -15,9 +15,7 @@ import java.util.Calendar;
 
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.View;
@@ -34,6 +32,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.grupo7.daam.myexsteerience.Accessory.BaseActivity;
 import com.example.grupo7.daam.myexsteerience.Objects.Post;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -44,7 +43,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 
-public class NewPostActivity extends AppCompatActivity {
+public class NewPostActivity extends BaseActivity {
 
     private FirebaseAuth mAuth;
     private FirebaseUser mUser;
@@ -72,7 +71,7 @@ public class NewPostActivity extends AppCompatActivity {
             month = Month;
             day = Day;
 
-            AppCompatTextView editData = (AppCompatTextView) findViewById(R.id.textData);
+            TextView editData = (TextView) findViewById(R.id.textData);
             editData.setText(getString(R.string.anuncio_dataPick)+ " " + day + "/" + (month + 1) + "/" + year);
         }
     };
@@ -324,7 +323,7 @@ public class NewPostActivity extends AppCompatActivity {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     String strName = arrayAdapterCity.getItem(which);
-                    AppCompatTextView editCity = (AppCompatTextView) findViewById(R.id.textCity);
+                    TextView editCity = (TextView) findViewById(R.id.textCity);
                     editCity.setText(strName);
                             dialog.dismiss();
                 }
@@ -372,7 +371,7 @@ public class NewPostActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         String strName = arrayAdapterClass.getItem(which);
-                        AppCompatTextView editClass = (AppCompatTextView) findViewById(R.id.textcategoria);
+                        TextView editClass = (TextView) findViewById(R.id.textcategoria);
                         editClass.setText(strName);
                         dialog.dismiss();
                     }

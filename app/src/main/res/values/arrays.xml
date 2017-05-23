@@ -15,7 +15,7 @@
         <item>@string/anuncio_subject_Retail</item>
     </string-array>
 
-    <string-array name="city_names">
+    <string-array name="city_names" translatable="false">
         <item>Aveiro</item>
         <item>Beja</item>
         <item>Braga</item>
