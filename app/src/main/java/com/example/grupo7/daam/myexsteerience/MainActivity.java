@@ -146,6 +146,22 @@ public class MainActivity extends BaseActivity
             View v = navigationView.getHeaderView(0);
             preencherDadosUser(v);
             getData();
+            updateListView();
+        }
+    }
+
+    private void updateListView() {
+        if (state.equals("feedPost")){
+            listFeedPost.removeAll(listFeedPost);
+            state = "feedPost";
+            closeListenners();
+            feedPost();
+
+        }else if(state.equals("myPost")){
+            listMyPost.removeAll(listMyPost);
+            state = "myPost";
+            closeListenners();
+            myPost();
         }
     }
 
@@ -222,18 +238,7 @@ public class MainActivity extends BaseActivity
                 if(!text.getText().equals("")){
                     filtroCities = String.valueOf(text.getText());
                 }
-                if (state.equals("feedPost")){
-                   listFeedPost.removeAll(listFeedPost);
-                    state = "feedPost";
-                    closeListenners();
-                    feedPost();
-
-                }else if(state.equals("myPost")){
-                    closeListenners();
-                    listMyPost.removeAll(listMyPost);
-                    state = "myPost";
-                    myPost();
-                }
+              updateListView();
             }
         });
 
