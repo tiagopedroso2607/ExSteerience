@@ -308,23 +308,28 @@ public class MainActivity extends BaseActivity
                            try {
                                 ratingUser = String.valueOf(dataSnapshot.child("rating").getValue());
                                 ratingDouble =  Double.parseDouble(ratingUser);
-                            } catch (NumberFormatException e) {
-                                ratingDouble = 0.0; // your default value
+
+
+                               TextView ratingNumerico = (TextView)MainActivity.this.findViewById(R.id.RatingNumerico);
+                               DecimalFormat df = new DecimalFormat();
+                               df.setMaximumFractionDigits(2);
+                               ratingNumerico.setText( getString(R.string.userInfo_rate) + " " + df.format(ratingDouble));
+
+                               float ratingFloat = (float)ratingDouble;
+                               RatingBar ratingBar = (RatingBar) MainActivity.this.findViewById(R.id.ratingBar);
+                               ratingBar.setRating(ratingFloat);
+
+                               TextView username = (TextView)MainActivity.this.findViewById(R.id.nav_header_username);
+                               username.setText(mUser.getDisplayName());
+
+                               hideProgressDialog();
+
+
+                           } catch (NumberFormatException e) {
+                                onStart();
                             }
 
-                            TextView ratingNumerico = (TextView)MainActivity.this.findViewById(R.id.RatingNumerico);
-                            DecimalFormat df = new DecimalFormat();
-                            df.setMaximumFractionDigits(2);
-                            ratingNumerico.setText( getString(R.string.userInfo_rate) + " " + df.format(ratingDouble));
 
-                            float ratingFloat = (float)ratingDouble;
-                            RatingBar ratingBar = (RatingBar) MainActivity.this.findViewById(R.id.ratingBar);
-                            ratingBar.setRating(ratingFloat);
-
-                            TextView username = (TextView)MainActivity.this.findViewById(R.id.nav_header_username);
-                            username.setText(mUser.getDisplayName());
-
-                            hideProgressDialog();
                         }
 
                         @Override
