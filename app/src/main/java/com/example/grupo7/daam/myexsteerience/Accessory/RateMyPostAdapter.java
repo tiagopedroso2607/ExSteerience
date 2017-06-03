@@ -20,6 +20,7 @@ import android.widget.DatePicker;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+
 import com.example.grupo7.daam.myexsteerience.Objects.Comment;
 import com.example.grupo7.daam.myexsteerience.Objects.Post;
 import com.example.grupo7.daam.myexsteerience.R;
@@ -283,7 +284,7 @@ public class RateMyPostAdapter extends BaseAdapter {
                 if(ratingBar.getRating() > 0.0){
 
                 viewHolderComment.CommentRating.setText(context.getString(R.string.comment_rating) + " " + ratingBar.getRating() );
-                DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
+                final DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
                 final DatabaseReference ref = mDatabase.child("post-comment").child(PostID);
 
                 ref.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -314,13 +315,11 @@ public class RateMyPostAdapter extends BaseAdapter {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
 
-                        //protege a app de ir a baixo quando é criado uma conta, reconhece o valor obtido como null
-                        try {
                             String ratingUser;
                             ratingUser = String.valueOf(dataSnapshot.child("rating").getValue());
                             ratingUserdouble =  Double.parseDouble(ratingUser);
-                        } catch (NumberFormatException e) {
-                        }
+
+
                     }
 
                     @Override
@@ -332,13 +331,11 @@ public class RateMyPostAdapter extends BaseAdapter {
                 ref2.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
-                        //protege a app de ir a baixo quando é criado uma conta, reconhece o valor obtido como null
-                        try {
+
                             String UsernrVotosRecebidos;
                             UsernrVotosRecebidos = String.valueOf(dataSnapshot.child("nrVotosRecebidos").getValue());
                             UsernrVotosRecebidosdouble =  Double.parseDouble(UsernrVotosRecebidos);
-                        } catch (NumberFormatException e) {
-                        }
+
                     }
 
                     @Override
@@ -350,8 +347,7 @@ public class RateMyPostAdapter extends BaseAdapter {
                     ref3.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
-                            //protege a app de ir a baixo quando é criado uma conta, reconhece o valor obtido como null
-                            try {
+
                                 String UsernrVotosFeitos;
                                 UsernrVotosFeitos = String.valueOf(dataSnapshot.child("nrVotosFeitos").getValue());
                                 UsernrVotosFeitosdouble =  Double.parseDouble(UsernrVotosFeitos);
@@ -359,8 +355,7 @@ public class RateMyPostAdapter extends BaseAdapter {
                                 String UserMediaRatingDado;
                                 UserMediaRatingDado = String.valueOf(dataSnapshot.child("mediaRatingDado").getValue());
                                 UserMediaRatingDadodouble =  Double.parseDouble(UserMediaRatingDado);
-                            } catch (NumberFormatException e) {
-                            }
+
                         }
 
                         @Override
@@ -368,13 +363,26 @@ public class RateMyPostAdapter extends BaseAdapter {
 
                         }
                     });
+                    Thread background = new Thread() {
+                        public void run() {
 
-                double newValueRating = (((UsernrVotosRecebidosdouble * ratingUserdouble) + ratingBar.getRating()) / (UsernrVotosRecebidosdouble + 1));
-                double newMediaRating =(((UserMediaRatingDadodouble * UsernrVotosFeitosdouble) + ratingBar.getRating()) / (UsernrVotosFeitosdouble + 1));
-                    mDatabase.child("users").child(comment.getUidAutor()).child("rating").setValue(newValueRating);
-                    mDatabase.child("user-info").child(comment.getUidAutor()).child("nrVotosRecebidos").setValue(UsernrVotosRecebidosdouble + 1);
-                    mDatabase.child("user-info").child(mUser.getUid()).child("nrVotosFeitos").setValue(UsernrVotosFeitosdouble + 1);
-                    mDatabase.child("user-info").child(mUser.getUid()).child("mediaRatingDado").setValue(newMediaRating);
+                            try {
+                                sleep(750);
+
+                                double newValueRating = (((UsernrVotosRecebidosdouble * ratingUserdouble) + ratingBar.getRating()) / (UsernrVotosRecebidosdouble + 1));
+                                double newMediaRating =(((UserMediaRatingDadodouble * UsernrVotosFeitosdouble) + ratingBar.getRating()) / (UsernrVotosFeitosdouble + 1));
+                                mDatabase.child("users").child(comment.getUidAutor()).child("rating").setValue(newValueRating);
+                                mDatabase.child("user-info").child(comment.getUidAutor()).child("nrVotosRecebidos").setValue(UsernrVotosRecebidosdouble + 1);
+                                mDatabase.child("user-info").child(mUser.getUid()).child("nrVotosFeitos").setValue(UsernrVotosFeitosdouble + 1);
+                                mDatabase.child("user-info").child(mUser.getUid()).child("mediaRatingDado").setValue(newMediaRating);
+                            } catch (Exception e) {
+
+                            }
+                        }
+                    };
+
+                    background.start();
+
                 }
             }
         });
